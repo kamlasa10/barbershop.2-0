@@ -7,6 +7,10 @@ const sassGlob = require('gulp-sass-glob');
 const groupMediaQueries = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-cleancss');
 
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
@@ -22,6 +26,43 @@ const paths =  {
   src: './src/',              // paths.src
   build: './build/'           // paths.build
 };
+
+var config = {
+  mode: {
+    symbol: {
+      sprite: "../sprite.svg",
+      render: {
+      }
+    }
+  }
+};
+
+function SpriteSvg() {
+  return gulp.src(paths.src + '/icons/*.svg')
+  // минифицируем svg
+      .pipe(svgmin({
+        js2svg: {
+          pretty: true
+        }
+      }))
+      // удалить все атрибуты fill, style and stroke в фигурах
+      .pipe(cheerio({
+        run: function($) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        },
+        parserOptions: {
+          xmlMode: true
+        }
+      }))
+      // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
+      .pipe(replace('&gt;', '>'))
+      // build svg sprite
+      .pipe(svgSprite(config))
+      .pipe(gulp.dest(paths.build + '/icons/sprite/'));
+};
+
 
 function styles() {
   return gulp.src(paths.src + 'scss/main.scss')
@@ -87,6 +128,7 @@ exports.clean = clean;
 exports.watch = watch;
 exports.img = img;
 exports.fonts = fonts;
+exports.SpriteSvg = SpriteSvg;
 
 gulp.task('build', gulp.series(
     clean,
@@ -94,12 +136,13 @@ gulp.task('build', gulp.series(
     scripts,
     htmls,
     img,
-    fonts
+    fonts,
+    SpriteSvg
     // gulp.parallel(styles, scripts, htmls, img, fonts)
 ));
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, htmls, img, fonts),
+    gulp.parallel(styles, scripts, htmls, img, fonts, SpriteSvg),
     gulp.parallel(watch, serve)
 ));
