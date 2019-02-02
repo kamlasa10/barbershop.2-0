@@ -1,0 +1,15 @@
+@mixin tablets {
+  @media screen and (max-width: $tablets){
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phones){
+    @content;
+  }
+}
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
