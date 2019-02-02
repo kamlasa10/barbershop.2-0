@@ -1,0 +1,32 @@
+.page-footer {
+  padding:  50px 0;
+  color: $white;
+  background-color: #292929;
+
+  @include phones {
+    text-align: center;
+  }
+}
+.page-footer-row {
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include phones {
+    display: block;
+  }
+}
+.page-footer__text {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.page-footer__wrapper {
+  @include tablets {
+    order: 3;
+    width: 100%;
+  }
+}
+.page-footer__intro {
+  @include tablets {
+    display: none;
+  }
+}

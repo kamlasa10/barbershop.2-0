@@ -1,0 +1,115 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+
+  @include tablets {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+.socials__link {
+  position: relative;
+  display: block;
+  width: 17.3%;
+  padding: 24px 0;
+  margin-right: 7px;
+  border: 1px solid #3f3f3f;
+  transition: all 0.3s;
+  
+  &:hover {
+    border-color: #545454;
+  }
+
+  &:active {
+    border-color: transparent;
+    background-color: #252525;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    width: 33.3%;
+    margin-right: 0;
+    padding: 45px 0;
+  }
+}
+.socials__link--icon-vk::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  background-image:url(../images/sprite.png);
+  background-position:-36px -45px;
+  background-repeat: no-repeat;
+  width:19px;
+  height:19px;
+
+  @include tablets {
+    width: 23px;
+    height: 26px;
+    background-position: -36px 0;
+    top: 29px;
+    left: 96px;
+  }
+
+  @include phones {
+    top: 31px;
+    left: 35px;
+  }
+}
+.socials__link--icon-fb::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  background-image:url(../images/sprite.png);
+  background-position:-18px -36px;
+  background-repeat: no-repeat;
+  width:19px;
+  height:19px;
+
+  @include tablets {
+    top: 22px;
+    left: 102px;
+    width: 18px;
+    height: 39px;
+    background-position: 0 -36px;
+  }
+
+  @include phones {
+    top: 25px;
+    left: 41px;
+  }
+}
+.socials__link--icon-inst::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  background-image:url(../images/sprite.png);
+  background-position:-36px -26px;
+  background-repeat: no-repeat;
+  width:19px;
+  height:19px;
+
+  @include tablets {
+    top: 24px;
+    left: 91px;
+    width: 36px;
+    height: 36px;
+    background-position: 0 0;
+  }
+
+  @include phones {
+    top: 27px;
+    left: 36px;
+  }
+}

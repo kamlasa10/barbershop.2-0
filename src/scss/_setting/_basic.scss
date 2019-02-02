@@ -2,25 +2,84 @@
 *,*::after {
   box-sizing: inherit;
 }
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'PT Sans - Narrow', Tahoma, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 27px;
   color: #fff;
-  background-color: #000;
   box-sizing: border-box;
+
+  @include tablets {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 15px;
+  }
 }
 
 .wrapper {
   overflow: hidden;
 }
 .container {
-  max-width: 320px;
+  width: 960px;
+  margin: 0 auto;
+
+  @include tablets {
+    width: 640px;
+  }
+
+  @include phones {
+    width: auto;
+  }
 
 }
 .row {
   display: flex;
+}
+.btn {
+  display: block;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $white;
+  border: 1px solid rgba($white, 0.1);
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: #545454;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: #252525;
+    border-color: transparent;
+  }
+
+  @include phones {
+    margin: 0 15px;
+  }
+}
+.btn--black {
+  color: $black;
+  border: 1px solid #e5ddd5;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.page-title {
+  margin-bottom: 45px;
+  font-size: 40px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $black;
+}
+.section {
+  padding: 40px 0;
+}
+.d-hidden {
+  display: none;
 }

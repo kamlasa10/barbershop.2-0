@@ -1,0 +1,11 @@
+.copyright {
+  @include tablets {
+    text-align: right;
+  }
+}
+.copyright__link {
+  padding-left: 27px;
+  padding-right: 27px;
+
+
+}
