@@ -1,0 +1,98 @@
+.news {
+  color: $black;
+  border-bottom: 1px solid #e5ddd5;
+}
+.news-row {
+  align-items: center;
+}
+.news__title {
+  margin-right: auto;
+  white-space: nowrap;
+  @include phones {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+.news__block {
+  margin-top: -10px;
+}
+.news__btn {
+  @include phones {
+    display: none;
+  }
+}
+.news__btn--mobile {
+  display: none;
+  @include phones {
+    display: block;
+  }
+}
+.news__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+.news__item {
+  width: 320px;
+
+  @include tablets {
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @include phones {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &:first-child {
+      border-bottom: 1px solid #e5ddd5;
+    }
+  }
+}
+.news__date {
+  position: relative;
+  height: 65px;
+  padding: 5px 6px;
+  margin-top: 15px;
+  margin-right: 20px;
+  text-align: center;
+  color: $white;
+  background-color: $black;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 23px solid transparent;
+    border-right: 27px solid transparent;
+    border-top: 9px solid $black;
+  }
+}
+.news__day {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.news__month {
+  font-size: 16px;
+  line-height: 30px;
+}
+.news__desc {
+  padding-right: 20px;
+}
