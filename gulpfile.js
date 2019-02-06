@@ -46,6 +46,8 @@ var config = {
 
 function SpritePng() {
   const spriteData =  gulp.src(paths.src + '/images/*.png').pipe(spritesmith({
+    "x": 10,
+    "y": 15,
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }));

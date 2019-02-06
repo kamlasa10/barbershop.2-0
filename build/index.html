@@ -8,147 +8,226 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
 </head>
 <body>
-<header class="main-header">
-  <div class="container">
-    <div class="main-header__logo">
-      <a href="#">
-      </a>
-    </div>
-    <nav class="main-navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">
-
-          </a>
-        </li>
-        <li class="navigation__item">
-
-        </li>
-        <li class="navigation__item">
-
-        </li>
-        <li class="navigation__item">
-
-        </li>
-        <li class="navigation__item">
-
-        </li>
-        <li class="navigation__item">
-
-        </li>
-        <li class="navigation__item">
-
-        </li>
-        <li class="navigation__item">
-
-        </li>
-      </ul>
-
-    </nav>
-
-  </div>
-</header>
-<main class="page-content">
-  <section class="news section">
+<div class="wrapper">
+  <header class="main-header">
     <div class="container">
-      <div class="row news-row">
-        <h3 class="news__title page-title">Новости и акции</h3>
-        <div class="news__block">
-          <a class="news__btn btn btn--black" href="#">Показать все</a>
-        </div>
+      <div class="main-header__logo">
+        <a href="#">
+        </a>
       </div>
-      <ul class="news__list">
-        <li class="news__item">
-          <div class="row">
-            <div class="news__date">
-              <div class="news__day">29</div>
-              <span class="news__month">сент</span>
-            </div>
-            <div class="news__desc">
-              Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
-            </div>
-          </div>
-        </li>
-        <li class="news__item">
-          <div class="row">
-            <div class="news__date">
-              <div class="news__day">29</div>
-              <span class="news__month">сент</span>
-            </div>
-            <div class="news__desc">
-              Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
-            </div>
-          </div>
-        </li>
-        <li class="news__item">
-          <div class="row">
-            <div class="news__date">
-              <div class="news__day">29</div>
-              <span class="news__month">сент</span>
-            </div>
-            <div class="news__desc">
-              Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="news__block">
-        <a class="news__btn news__btn--mobile btn btn--black" href="#">Показать все</a>
-      </div>
+      <nav class="main-navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+
+            </a>
+          </li>
+          <li class="navigation__item">
+
+          </li>
+          <li class="navigation__item">
+            <a href="photo.html">Наши работы</a>
+          </li>
+          <li class="navigation__item">
+
+          </li>
+          <li class="navigation__item">
+
+          </li>
+          <li class="navigation__item">
+
+          </li>
+          <li class="navigation__item">
+
+          </li>
+          <li class="navigation__item">
+
+          </li>
+        </ul>
+
+      </nav>
+
     </div>
-  </section>
-  <section class="reviews section">
-    <div class="container">
-      <div class="row reviews-row">
-        <h3 class="reviews__heading page-title">Отзывы о нас</h3>
-        <div class="reviews__block">
-          <a class="btn btn--black reviews__link" href="#">Оставить свой</a>
-        </div>
-      </div>
-      <ul class="reviews-list">
-        <li class="reviews__item">
-          <div class="row">
-            <div class="reviews__img">
-              <img src="images/reviews__img.jpg" alt="Картинка Пользователя">
+  </header>
+  <main class="page-content">
+    <section class="features section">
+      <div class="container">
+        <ul class="features__list slider-top">
+          <li class="features__item slider-top__item">
+            <div class="features__img features__img--fast">
+              <svg>
+                <use xlink:href="icons/sprite/sprite.svg#fast"></use>
+              </svg>
             </div>
-            <div class="reviews__content">
-              <div class="reviews__title">Трэвис Баркер</div>
-              <div class="reviews__desc">
-                Спасибо за лысину! Был проездом в Москве, заскочил побриться,
-                чтобы было видно новую татуировку!
+            <div class="features__content">
+              <b class="features__title">Быстро</b>
+              <div class="features__desc">
+                Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый
+                обладатель стильной стрижки-минутки
               </div>
             </div>
+          </li>
+          <li class="features__item slider-top__item">
+            <div class="features__img features__img--cool">
+              <svg>
+                <use xlink:href="icons/sprite/sprite.svg#cool"></use>
+              </svg>
+            </div>
+            <div class="features__content">
+              <b class="features__title">Круто</b>
+              <div class="features__desc">
+                Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино.
+                Во всяком случае внешне.
+              </div>
+            </div>
+          </li>
+          <li class="features__item slider-top__item">
+            <div class="features__img features__img--price">
+              <svg>
+                <use xlink:href="icons/sprite/sprite.svg#price"></use>
+              </svg>
+            </div>
+            <div class="features__content">
+              <b class="features__title">Дорого</b>
+              <div class="features__desc">
+                Наши мастера — профессионалы своего делаи не могут стоить дёшево.
+                К тому же, разве цена не даёт определённый статус?
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="news section">
+      <div class="container">
+        <div class="row news-row">
+          <h3 class="news__title page-title">Новости и акции</h3>
+          <div class="news__block">
+            <a class="news__btn btn btn--black" href="#">Показать все</a>
           </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-</main>
-<footer class="page-footer">
-  <div class="container">
-    <div class="row page-footer-row">
-      <div class="contacts page-footer__contacts">
-        <div class="contacts__title">Барбершоп Бородинский</div>
-        <div class="contacts__adress">
-          г. Санкт-Петербург, ул. Большая <br> Конюшенная 19/8
         </div>
-        <a class="contacts__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
-      </div>
-      <div class="page-footer__wrapper">
-        <div class="page-footer__text page-footer__intro">Давайте дружить!</div>
-        <div class="socials">
-          <a class="socials__link socials__link--icon-vk" href="#"></a>
-          <a class="socials__link socials__link--icon-fb" href="#"></a>
-          <a class="socials__link socials__link--icon-inst" href="#"></a>
+        <ul class="news__list">
+          <li class="news__item">
+            <div class="row">
+              <div class="news__date">
+                <div class="news__day">29</div>
+                <span class="news__month">сент</span>
+              </div>
+              <div class="news__desc">
+                Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+              </div>
+            </div>
+          </li>
+          <li class="news__item">
+            <div class="row">
+              <div class="news__date">
+                <div class="news__day">29</div>
+                <span class="news__month">сент</span>
+              </div>
+              <div class="news__desc">
+                Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+              </div>
+            </div>
+          </li>
+          <li class="news__item">
+            <div class="row">
+              <div class="news__date">
+                <div class="news__day">29</div>
+                <span class="news__month">сент</span>
+              </div>
+              <div class="news__desc">
+                Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="news__block">
+          <a class="news__btn news__btn--mobile btn btn--black" href="#">Показать все</a>
         </div>
       </div>
-      <div class="copyright footer__copyright">
-        <div class="copyright__title page-footer__text">Разработано:</div>
-        <a class="btn copyright__link" href="#">HTML ACADEMY</a>
+    </section>
+    <section class="reviews section">
+      <div class="container">
+        <div class="row reviews-row">
+          <h3 class="reviews__heading page-title">Отзывы о нас</h3>
+          <div class="reviews__block">
+            <a class="btn btn--black reviews__link" href="#">Оставить свой</a>
+          </div>
+        </div>
+        <ul class="reviews-list slider">
+          <li class="reviews__item slider__item">
+            <div class="row">
+              <div class="reviews__img">
+                <img src="images/reviews__img.jpg" alt="Картинка Пользователя">
+              </div>
+              <div class="reviews__content">
+                <div class="reviews__title">Трэвис Баркер</div>
+                <div class="reviews__desc">
+                  Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                  чтобы было видно новую татуировку!
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="reviews__item slider__item">
+            <div class="row">
+              <div class="reviews__img">
+                <img src="images/reviews__img.jpg" alt="Картинка Пользователя">
+              </div>
+              <div class="reviews__content">
+                <div class="reviews__title">Трэвис Баркер</div>
+                <div class="reviews__desc">
+                  Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                  чтобы было видно новую татуировку!
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="reviews__item slider__item">
+            <div class="row">
+              <div class="reviews__img">
+                <img src="images/reviews__img.jpg" alt="Картинка Пользователя">
+              </div>
+              <div class="reviews__content">
+                <div class="reviews__title">Трэвис Баркер</div>
+                <div class="reviews__desc">
+                  Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                  чтобы было видно новую татуировку!
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row page-footer-row">
+        <div class="contacts page-footer__contacts">
+          <div class="contacts__title">Барбершоп Бородинский</div>
+          <div class="contacts__adress">
+            г. Санкт-Петербург, ул. Большая <br> Конюшенная 19/8
+          </div>
+          <a class="contacts__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </div>
+        <div class="page-footer__wrapper">
+          <div class="page-footer__text page-footer__intro">Давайте дружить!</div>
+          <div class="socials">
+            <a class="socials__link socials__link--icon-vk" href="#"></a>
+            <a class="socials__link socials__link--icon-fb" href="#"></a>
+            <a class="socials__link socials__link--icon-inst" href="#"></a>
+          </div>
+        </div>
+        <div class="copyright footer__copyright">
+          <div class="copyright__title page-footer__text">Разработано:</div>
+          <a class="btn copyright__link" href="#">HTML ACADEMY</a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-  <script src="js/main.js"></script>
+  </footer>
+</div>
+
+  <script src="js/main.min.js"></script>
 </body>
 </html>

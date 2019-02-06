@@ -1,0 +1,116 @@
+.slider {
+  position: relative;
+}
+.slider {
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    &:hover, &:focus {
+      outline: none;
+      background: transparent;
+      color: transparent;
+      &:before {
+        opacity: $slick-opacity-on-hover;
+      }
+    }
+    &.slick-disabled:before {
+      opacity: $slick-opacity-not-active;
+    }
+    &:before {
+      font-family: $slick-font-family;
+      font-size: 20px;
+      line-height: 1;
+      color: $slick-arrow-color;
+      opacity: $slick-opacity-default;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+}
+.slider {
+  .slick-prev,
+  .slick-next {
+    width: 50px;
+    height: 160px;
+    background-color: #f8f5f2;
+    border: 1px solid #e5ddd5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 43%;
+      left: 38%;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-left: 11px solid $black;
+      border-bottom: 8px solid transparent;
+    }
+
+    @include tablets {
+      height: 156px;
+    }
+    @include phones {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  .slick-prev {
+    left: -70px;
+    top: 50%;
+    [dir="rtl"] & {
+      left: auto;
+      right: -25px;
+    }
+    &:before {
+      transform: rotate(-180deg);
+      content: $slick-prev-character;
+      [dir="rtl"] & {
+        content: $slick-next-character;
+      }
+    }
+
+    @include tablets {
+      left: -50px;
+      top: 48%;
+    }
+    @include phones {
+      display: none;
+    }
+  }
+
+  .slick-next {
+    right: -70px;
+    top: 48%;
+    [dir="rtl"] & {
+      left: -25px;
+      right: auto;
+    }
+    &:before {
+      content: $slick-next-character;
+      [dir="rtl"] & {
+        content: $slick-prev-character;
+      }
+    }
+
+    @include tablets {
+      right: -50px;
+    }
+  }
+}

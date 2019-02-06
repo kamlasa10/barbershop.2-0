@@ -5,6 +5,10 @@
 @import "_setting/fonts";
 @import "_setting/basic";
 
+// plugin style
+@import "_setting/slick";
+@import "_setting/slick-theme";
+
 // Project directory style
 @import "_section/*.scss";
 @import "_blocks/*.scss";
